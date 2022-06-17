@@ -17,7 +17,6 @@ import java.util.stream.Collectors;
 class EmployeeModelAssembler implements RepresentationModelAssembler<Employee, EntityModel<Employee>> {
 
 
-
     @Override
     public EntityModel<Employee> toModel(Employee employee) {
 
@@ -25,5 +24,9 @@ class EmployeeModelAssembler implements RepresentationModelAssembler<Employee, E
                 linkTo(methodOn(EmployeeController.class).one(employee.getId())).withSelfRel(),
                 linkTo(methodOn(EmployeeController.class).all()).withRel("employees"));
     }
+
+
+
+
 
     }
